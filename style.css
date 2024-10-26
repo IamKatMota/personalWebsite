@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* MAIN STYLES */
+a {
+    text-decoration: none;
+}
+body {
+    font-family: "Source Sans 3", sans-serif, Arial, Helvetica;}
+h1,
+h2{
+    font-weight: 300;
+}
+h1{
+    font-size: 2.5rem;
+    padding: 1rem;
+}
+h2::after{
+    display: block;
+    content: '';
+    margin-top: 30px;
+    width: 100px;
+    border-bottom: 1px solid #b5b5b5;
+}
+h2{
+    font-size: 2rem;
+    padding: 2rem 0;
+}
+/* page scrolls smoothly after clicking button */
+html{
+    scroll-behavior: smooth;
+}
+section{
+    padding: 3rem;
+}
+p,
+li{
+    font-weight: 300;
+}
+
+/* HEADER */
+.header {
+    background-image: linear-gradient(200deg, rgb(100, 166, 189), rgb(173, 167, 201), rgb(218, 170, 214), rgb(246, 179, 214));
+    color: white;
+}
+
+.fa-regular.fa-face-smile {
+    font-size: 4rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 5rem 0 1rem 0;
+}
+.inner{
+    text-align: center;
+    opacity: 0;  /* Initially hidden */
+    transform: translateY(20px);  /* Slightly move the text down initially */
+    animation: fadeInMove 1.5s ease forwards; /* Apply animation */
+}
+
+/* Define the keyframes for the fade and move animation */
+@keyframes fadeInMove {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);  /* Starting state: hidden and moved down */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);  /* Ending state: visible and in original position */
+    }
+}
+
+.actions.special{
+    padding: 3rem 0 9rem 0;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.3rem;
+}
+
+.actions.special a{
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 1rem 2rem 1rem 2rem;
+    color: white;
+}
+
+.actions.special a:hover{
+    background-color: rgba(100, 165, 189, 0.619);
+    transform: translateY(-10px);
+}
+
+/* TWO & SUBMISSION PG*/
+.style2,
+.submission{
+    background-image: linear-gradient(to bottom, rgba(158, 148, 204, 0.731), rgba(219, 142, 213, 0.743));
+    color: white;
+}
+.style2 h2::after{
+    display: block;
+    content: '';
+    margin-top: 30px;
+    width: 100px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.submission{
+    margin-top: 50%;
+}
+/* IMAGES */
+
+#headshot{
+    width: 100%;
+    padding-top: 2rem;
+}
+
+/*FORM */
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:16px ;
+}
+.centered{
+    justify-self: center;}
+    
+#message,
+#submit{
+    width: 100%;
+    height: 100%;
+}
+.full-width{
+    grid-column: 1 / 3;
+}
+.form{
+    background-image: linear-gradient(to bottom, rgba(158, 148, 204, 0.731), rgba(219, 142, 213, 0.743));
+}
+
+
+
+/* FOOTER */
+#footer{
+    background-image: linear-gradient(200deg, rgb(246, 179, 214), rgb(218, 170, 214), rgb(173, 167, 201),rgb(100, 166, 189));
+    color: white;
+}
+.icons li {
+    list-style: none;
+}
+.icons{
+    display: flex;
+    justify-content: space-evenly;
+}
+.icons a{
+    color: #ffffff;
+}
+.fa-brands{
+    padding-right: .5rem;
+}
+/* media queries */
+@media (max-width: 660px) {
+    .actions.special {
+        display: flex; /* Use flexbox for responsive layout */
+        flex-wrap: wrap; /* Allow items to wrap onto the next line if needed */
+        gap: 15px; /* Adds space between each link */
+        justify-content: center; 
+    }
+    .actions.special a {
+        flex: 1 1 auto; /* Allows each item to shrink or grow based on available space */
+        text-align: center;
+    }
+}
