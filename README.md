@@ -37,9 +37,6 @@ Some highlights of the portfolio include:
 	•	HTML5
 	•	CSS3 (Flexbox, Grid)
 	•	JavaScript (ES6+)
-	•	React.js (optional, if used)
-	•	Backend:
-	•	
 
 	•	Version Control:
 	•	Git & GitHub
